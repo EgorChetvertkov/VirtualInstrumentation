@@ -93,7 +93,7 @@ namespace VirtualInstrumentation
 
         public void PrintMessage(InstrumentMessage message)
         {
-
+            InfoTB.Text = message.ToString();
         }
     }
 }

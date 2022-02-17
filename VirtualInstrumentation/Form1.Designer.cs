@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea13 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
-            System.Windows.Forms.DataVisualization.Charting.Series series13 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.XBase0Label = new System.Windows.Forms.Label();
             this.XBase0TB = new System.Windows.Forms.TextBox();
@@ -38,10 +38,14 @@
             this.XBase2TB = new System.Windows.Forms.TextBox();
             this.XBase2Label = new System.Windows.Forms.Label();
             this.BaseXGB = new System.Windows.Forms.GroupBox();
+            this.YBaseLabel = new System.Windows.Forms.Label();
             this.IndicatorXBase2 = new System.Windows.Forms.Panel();
+            this.YBaseTB = new System.Windows.Forms.TextBox();
             this.IndicatorXBase1 = new System.Windows.Forms.Panel();
             this.IndicatorXBase0 = new System.Windows.Forms.Panel();
             this.FilterXGB = new System.Windows.Forms.GroupBox();
+            this.YFilterLabel = new System.Windows.Forms.Label();
+            this.YFilterTB = new System.Windows.Forms.TextBox();
             this.IndicatorXFilter2 = new System.Windows.Forms.Panel();
             this.IndicatorXFilter1 = new System.Windows.Forms.Panel();
             this.IndicatorXFilter0 = new System.Windows.Forms.Panel();
@@ -52,6 +56,10 @@
             this.XFilter1Label = new System.Windows.Forms.Label();
             this.XFilter1TB = new System.Windows.Forms.TextBox();
             this.SettersParametrsGB = new System.Windows.Forms.GroupBox();
+            this.Weight5NUD = new System.Windows.Forms.NumericUpDown();
+            this.Weight5Label = new System.Windows.Forms.Label();
+            this.Weight4NUD = new System.Windows.Forms.NumericUpDown();
+            this.Weight4Label = new System.Windows.Forms.Label();
             this.Weight3NUD = new System.Windows.Forms.NumericUpDown();
             this.Weight3Label = new System.Windows.Forms.Label();
             this.Weight2NUD = new System.Windows.Forms.NumericUpDown();
@@ -60,70 +68,62 @@
             this.Weight1Label = new System.Windows.Forms.Label();
             this.Weight0NUD = new System.Windows.Forms.NumericUpDown();
             this.Weight0Label = new System.Windows.Forms.Label();
-            this.Weight4NUD = new System.Windows.Forms.NumericUpDown();
-            this.Weight4Label = new System.Windows.Forms.Label();
-            this.Weight5NUD = new System.Windows.Forms.NumericUpDown();
-            this.Weight5Label = new System.Windows.Forms.Label();
-            this.YBaseTB = new System.Windows.Forms.TextBox();
-            this.YFilterTB = new System.Windows.Forms.TextBox();
-            this.YBaseLabel = new System.Windows.Forms.Label();
-            this.YFilterLabel = new System.Windows.Forms.Label();
             this.StartBtn = new System.Windows.Forms.Button();
             this.ExitBtn = new System.Windows.Forms.Button();
             this.StopBtn = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.label1 = new System.Windows.Forms.Label();
+            this.InfoTB = new System.Windows.Forms.TextBox();
+            this.InfoLabel = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.Chart)).BeginInit();
             this.BaseXGB.SuspendLayout();
             this.FilterXGB.SuspendLayout();
             this.SettersParametrsGB.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Weight5NUD)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Weight4NUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight3NUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight2NUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight1NUD)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight0NUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Weight4NUD)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Weight5NUD)).BeginInit();
             this.SuspendLayout();
             // 
             // Chart
             // 
             this.Chart.BackColor = System.Drawing.Color.Black;
             this.Chart.BorderlineColor = System.Drawing.Color.Black;
-            chartArea13.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.LabelStyle.Format = "HH:mm:ss";
-            chartArea13.AxisX.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.MajorGrid.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.Maximum = 9D;
-            chartArea13.AxisX.Minimum = 0D;
-            chartArea13.AxisX.MinorGrid.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisX.TitleForeColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.Interval = 11D;
-            chartArea13.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.MajorGrid.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.Maximum = 55D;
-            chartArea13.AxisY.Minimum = -55D;
-            chartArea13.AxisY.MinorGrid.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.MinorTickMark.LineColor = System.Drawing.Color.Lime;
-            chartArea13.AxisY.TitleForeColor = System.Drawing.Color.Lime;
-            chartArea13.BackColor = System.Drawing.Color.Black;
-            chartArea13.Name = "ChartArea";
-            this.Chart.ChartAreas.Add(chartArea13);
+            chartArea1.AxisX.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.LabelStyle.Format = "HH:mm:ss";
+            chartArea1.AxisX.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.MajorGrid.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.MajorTickMark.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.Maximum = 9D;
+            chartArea1.AxisX.Minimum = 0D;
+            chartArea1.AxisX.MinorGrid.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.MinorTickMark.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.ScaleBreakStyle.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisX.TitleForeColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.Interval = 11D;
+            chartArea1.AxisY.LabelStyle.ForeColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.MajorGrid.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.MajorTickMark.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.Maximum = 55D;
+            chartArea1.AxisY.Minimum = -55D;
+            chartArea1.AxisY.MinorGrid.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.MinorTickMark.LineColor = System.Drawing.Color.Lime;
+            chartArea1.AxisY.TitleForeColor = System.Drawing.Color.Lime;
+            chartArea1.BackColor = System.Drawing.Color.Black;
+            chartArea1.Name = "ChartArea";
+            this.Chart.ChartAreas.Add(chartArea1);
             this.Chart.Location = new System.Drawing.Point(409, 13);
             this.Chart.Margin = new System.Windows.Forms.Padding(4);
             this.Chart.Name = "Chart";
-            series13.BorderWidth = 2;
-            series13.ChartArea = "ChartArea";
-            series13.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series13.Color = System.Drawing.Color.Lime;
-            series13.LabelForeColor = System.Drawing.Color.Lime;
-            series13.Name = "Series1";
-            series13.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
-            this.Chart.Series.Add(series13);
+            series1.BorderWidth = 2;
+            series1.ChartArea = "ChartArea";
+            series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series1.Color = System.Drawing.Color.Lime;
+            series1.LabelForeColor = System.Drawing.Color.Lime;
+            series1.Name = "Series1";
+            series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            this.Chart.Series.Add(series1);
             this.Chart.Size = new System.Drawing.Size(762, 535);
             this.Chart.TabIndex = 0;
             this.Chart.Text = "График функции";
@@ -211,6 +211,15 @@
             this.BaseXGB.TabStop = false;
             this.BaseXGB.Text = "Исходные значения";
             // 
+            // YBaseLabel
+            // 
+            this.YBaseLabel.AutoSize = true;
+            this.YBaseLabel.Location = new System.Drawing.Point(7, 124);
+            this.YBaseLabel.Name = "YBaseLabel";
+            this.YBaseLabel.Size = new System.Drawing.Size(28, 18);
+            this.YBaseLabel.TabIndex = 11;
+            this.YBaseLabel.Text = "y =";
+            // 
             // IndicatorXBase2
             // 
             this.IndicatorXBase2.BackColor = System.Drawing.Color.Lime;
@@ -218,6 +227,18 @@
             this.IndicatorXBase2.Name = "IndicatorXBase2";
             this.IndicatorXBase2.Size = new System.Drawing.Size(16, 16);
             this.IndicatorXBase2.TabIndex = 9;
+            // 
+            // YBaseTB
+            // 
+            this.YBaseTB.BackColor = System.Drawing.Color.Black;
+            this.YBaseTB.ForeColor = System.Drawing.Color.Lime;
+            this.YBaseTB.Location = new System.Drawing.Point(46, 121);
+            this.YBaseTB.Name = "YBaseTB";
+            this.YBaseTB.ReadOnly = true;
+            this.YBaseTB.Size = new System.Drawing.Size(55, 26);
+            this.YBaseTB.TabIndex = 10;
+            this.YBaseTB.Text = "-55.01";
+            this.YBaseTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // IndicatorXBase1
             // 
@@ -254,6 +275,27 @@
             this.FilterXGB.TabIndex = 8;
             this.FilterXGB.TabStop = false;
             this.FilterXGB.Text = "Сглаженные значения";
+            // 
+            // YFilterLabel
+            // 
+            this.YFilterLabel.AutoSize = true;
+            this.YFilterLabel.Location = new System.Drawing.Point(7, 124);
+            this.YFilterLabel.Name = "YFilterLabel";
+            this.YFilterLabel.Size = new System.Drawing.Size(28, 18);
+            this.YFilterLabel.TabIndex = 24;
+            this.YFilterLabel.Text = "y =";
+            // 
+            // YFilterTB
+            // 
+            this.YFilterTB.BackColor = System.Drawing.Color.Black;
+            this.YFilterTB.ForeColor = System.Drawing.Color.Lime;
+            this.YFilterTB.Location = new System.Drawing.Point(46, 121);
+            this.YFilterTB.Name = "YFilterTB";
+            this.YFilterTB.ReadOnly = true;
+            this.YFilterTB.Size = new System.Drawing.Size(55, 26);
+            this.YFilterTB.TabIndex = 23;
+            this.YFilterTB.Text = "55.00";
+            this.YFilterTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // IndicatorXFilter2
             // 
@@ -362,6 +404,90 @@
             this.SettersParametrsGB.TabIndex = 9;
             this.SettersParametrsGB.TabStop = false;
             this.SettersParametrsGB.Text = "Настраиваемые параметры";
+            // 
+            // Weight5NUD
+            // 
+            this.Weight5NUD.BackColor = System.Drawing.Color.Black;
+            this.Weight5NUD.DecimalPlaces = 1;
+            this.Weight5NUD.ForeColor = System.Drawing.Color.Lime;
+            this.Weight5NUD.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.Weight5NUD.Location = new System.Drawing.Point(240, 59);
+            this.Weight5NUD.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Weight5NUD.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.Weight5NUD.Name = "Weight5NUD";
+            this.Weight5NUD.ReadOnly = true;
+            this.Weight5NUD.Size = new System.Drawing.Size(52, 26);
+            this.Weight5NUD.TabIndex = 21;
+            this.Weight5NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Weight5NUD.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.Weight5NUD.ValueChanged += new System.EventHandler(this.Weight5NUD_ValueChanged);
+            // 
+            // Weight5Label
+            // 
+            this.Weight5Label.AutoSize = true;
+            this.Weight5Label.Location = new System.Drawing.Point(200, 61);
+            this.Weight5Label.Name = "Weight5Label";
+            this.Weight5Label.Size = new System.Drawing.Size(37, 18);
+            this.Weight5Label.TabIndex = 20;
+            this.Weight5Label.Text = "w₅ =";
+            // 
+            // Weight4NUD
+            // 
+            this.Weight4NUD.BackColor = System.Drawing.Color.Black;
+            this.Weight4NUD.DecimalPlaces = 1;
+            this.Weight4NUD.ForeColor = System.Drawing.Color.Lime;
+            this.Weight4NUD.Increment = new decimal(new int[] {
+            1,
+            0,
+            0,
+            65536});
+            this.Weight4NUD.Location = new System.Drawing.Point(144, 59);
+            this.Weight4NUD.Maximum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            0});
+            this.Weight4NUD.Minimum = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.Weight4NUD.Name = "Weight4NUD";
+            this.Weight4NUD.ReadOnly = true;
+            this.Weight4NUD.Size = new System.Drawing.Size(52, 26);
+            this.Weight4NUD.TabIndex = 19;
+            this.Weight4NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.Weight4NUD.Value = new decimal(new int[] {
+            5,
+            0,
+            0,
+            -2147483648});
+            this.Weight4NUD.ValueChanged += new System.EventHandler(this.Weight4NUD_ValueChanged);
+            // 
+            // Weight4Label
+            // 
+            this.Weight4Label.AutoSize = true;
+            this.Weight4Label.Location = new System.Drawing.Point(104, 61);
+            this.Weight4Label.Name = "Weight4Label";
+            this.Weight4Label.Size = new System.Drawing.Size(37, 18);
+            this.Weight4Label.TabIndex = 18;
+            this.Weight4Label.Text = "w₄ =";
             // 
             // Weight3NUD
             // 
@@ -531,132 +657,6 @@
             this.Weight0Label.TabIndex = 10;
             this.Weight0Label.Text = "w₀ =";
             // 
-            // Weight4NUD
-            // 
-            this.Weight4NUD.BackColor = System.Drawing.Color.Black;
-            this.Weight4NUD.DecimalPlaces = 1;
-            this.Weight4NUD.ForeColor = System.Drawing.Color.Lime;
-            this.Weight4NUD.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.Weight4NUD.Location = new System.Drawing.Point(144, 59);
-            this.Weight4NUD.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.Weight4NUD.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.Weight4NUD.Name = "Weight4NUD";
-            this.Weight4NUD.ReadOnly = true;
-            this.Weight4NUD.Size = new System.Drawing.Size(52, 26);
-            this.Weight4NUD.TabIndex = 19;
-            this.Weight4NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Weight4NUD.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.Weight4NUD.ValueChanged += new System.EventHandler(this.Weight4NUD_ValueChanged);
-            // 
-            // Weight4Label
-            // 
-            this.Weight4Label.AutoSize = true;
-            this.Weight4Label.Location = new System.Drawing.Point(104, 61);
-            this.Weight4Label.Name = "Weight4Label";
-            this.Weight4Label.Size = new System.Drawing.Size(37, 18);
-            this.Weight4Label.TabIndex = 18;
-            this.Weight4Label.Text = "w₄ =";
-            // 
-            // Weight5NUD
-            // 
-            this.Weight5NUD.BackColor = System.Drawing.Color.Black;
-            this.Weight5NUD.DecimalPlaces = 1;
-            this.Weight5NUD.ForeColor = System.Drawing.Color.Lime;
-            this.Weight5NUD.Increment = new decimal(new int[] {
-            1,
-            0,
-            0,
-            65536});
-            this.Weight5NUD.Location = new System.Drawing.Point(240, 59);
-            this.Weight5NUD.Maximum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            0});
-            this.Weight5NUD.Minimum = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.Weight5NUD.Name = "Weight5NUD";
-            this.Weight5NUD.ReadOnly = true;
-            this.Weight5NUD.Size = new System.Drawing.Size(52, 26);
-            this.Weight5NUD.TabIndex = 21;
-            this.Weight5NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            this.Weight5NUD.Value = new decimal(new int[] {
-            5,
-            0,
-            0,
-            -2147483648});
-            this.Weight5NUD.ValueChanged += new System.EventHandler(this.Weight5NUD_ValueChanged);
-            // 
-            // Weight5Label
-            // 
-            this.Weight5Label.AutoSize = true;
-            this.Weight5Label.Location = new System.Drawing.Point(200, 61);
-            this.Weight5Label.Name = "Weight5Label";
-            this.Weight5Label.Size = new System.Drawing.Size(37, 18);
-            this.Weight5Label.TabIndex = 20;
-            this.Weight5Label.Text = "w₅ =";
-            // 
-            // YBaseTB
-            // 
-            this.YBaseTB.BackColor = System.Drawing.Color.Black;
-            this.YBaseTB.ForeColor = System.Drawing.Color.Lime;
-            this.YBaseTB.Location = new System.Drawing.Point(46, 121);
-            this.YBaseTB.Name = "YBaseTB";
-            this.YBaseTB.ReadOnly = true;
-            this.YBaseTB.Size = new System.Drawing.Size(55, 26);
-            this.YBaseTB.TabIndex = 10;
-            this.YBaseTB.Text = "-55.01";
-            this.YBaseTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // YFilterTB
-            // 
-            this.YFilterTB.BackColor = System.Drawing.Color.Black;
-            this.YFilterTB.ForeColor = System.Drawing.Color.Lime;
-            this.YFilterTB.Location = new System.Drawing.Point(46, 121);
-            this.YFilterTB.Name = "YFilterTB";
-            this.YFilterTB.ReadOnly = true;
-            this.YFilterTB.Size = new System.Drawing.Size(55, 26);
-            this.YFilterTB.TabIndex = 23;
-            this.YFilterTB.Text = "55.00";
-            this.YFilterTB.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // YBaseLabel
-            // 
-            this.YBaseLabel.AutoSize = true;
-            this.YBaseLabel.Location = new System.Drawing.Point(7, 124);
-            this.YBaseLabel.Name = "YBaseLabel";
-            this.YBaseLabel.Size = new System.Drawing.Size(28, 18);
-            this.YBaseLabel.TabIndex = 11;
-            this.YBaseLabel.Text = "y =";
-            // 
-            // YFilterLabel
-            // 
-            this.YFilterLabel.AutoSize = true;
-            this.YFilterLabel.Location = new System.Drawing.Point(7, 124);
-            this.YFilterLabel.Name = "YFilterLabel";
-            this.YFilterLabel.Size = new System.Drawing.Size(28, 18);
-            this.YFilterLabel.TabIndex = 24;
-            this.YFilterLabel.Text = "y =";
-            // 
             // StartBtn
             // 
             this.StartBtn.Location = new System.Drawing.Point(12, 377);
@@ -687,26 +687,26 @@
             this.StopBtn.UseVisualStyleBackColor = true;
             this.StopBtn.Click += new System.EventHandler(this.StopBtn_Click);
             // 
-            // textBox1
+            // InfoTB
             // 
-            this.textBox1.BackColor = System.Drawing.Color.Black;
-            this.textBox1.ForeColor = System.Drawing.Color.Lime;
-            this.textBox1.Location = new System.Drawing.Point(10, 304);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.ReadOnly = true;
-            this.textBox1.Size = new System.Drawing.Size(390, 67);
-            this.textBox1.TabIndex = 25;
-            this.textBox1.Text = "Тип\r\nКод\r\nТекст";
+            this.InfoTB.BackColor = System.Drawing.Color.Black;
+            this.InfoTB.ForeColor = System.Drawing.Color.Lime;
+            this.InfoTB.Location = new System.Drawing.Point(10, 304);
+            this.InfoTB.Multiline = true;
+            this.InfoTB.Name = "InfoTB";
+            this.InfoTB.ReadOnly = true;
+            this.InfoTB.Size = new System.Drawing.Size(390, 67);
+            this.InfoTB.TabIndex = 25;
+            this.InfoTB.Text = "Тип\r\nКод\r\nТекст";
             // 
-            // label1
+            // InfoLabel
             // 
-            this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(7, 283);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(176, 18);
-            this.label1.TabIndex = 22;
-            this.label1.Text = "Информационное окно";
+            this.InfoLabel.AutoSize = true;
+            this.InfoLabel.Location = new System.Drawing.Point(7, 283);
+            this.InfoLabel.Name = "InfoLabel";
+            this.InfoLabel.Size = new System.Drawing.Size(176, 18);
+            this.InfoLabel.TabIndex = 22;
+            this.InfoLabel.Text = "Информационное окно";
             // 
             // MainForm
             // 
@@ -714,8 +714,8 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
             this.ClientSize = new System.Drawing.Size(1184, 561);
-            this.Controls.Add(this.label1);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.InfoLabel);
+            this.Controls.Add(this.InfoTB);
             this.Controls.Add(this.StopBtn);
             this.Controls.Add(this.ExitBtn);
             this.Controls.Add(this.StartBtn);
@@ -738,12 +738,12 @@
             this.FilterXGB.PerformLayout();
             this.SettersParametrsGB.ResumeLayout(false);
             this.SettersParametrsGB.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.Weight5NUD)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.Weight4NUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight3NUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight2NUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight1NUD)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.Weight0NUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Weight4NUD)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.Weight5NUD)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -792,8 +792,8 @@
         private System.Windows.Forms.Button StartBtn;
         private System.Windows.Forms.Button ExitBtn;
         private System.Windows.Forms.Button StopBtn;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox InfoTB;
+        private System.Windows.Forms.Label InfoLabel;
     }
 }
 
