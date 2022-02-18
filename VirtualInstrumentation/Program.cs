@@ -1,8 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
 using System.Windows.Forms;
+
+using VirtualInstrumentation.Interfaces;
+using VirtualInstrumentation.Model;
 
 namespace VirtualInstrumentation
 {
@@ -16,7 +16,22 @@ namespace VirtualInstrumentation
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm());
+            IForm mainForm = new MainForm();
+            IModel instrument = new Instrument();
+
+            mainForm.Start += instrument.Start;
+            mainForm.Stop += instrument.Stop;
+            mainForm.Exit += instrument.Stop;
+            mainForm.WXChange += instrument.UpdateW;
+
+            instrument.BaseXs += mainForm.UpdateBaseXs;
+            instrument.FilterXs += mainForm.UpdateFilterXs;
+            instrument.BaseY += mainForm.UpdateBaseY;
+            instrument.FilterY += mainForm.UpdateFilterY;
+            instrument.NextPoint += mainForm.UpdateChart;
+            instrument.Message += mainForm.PrintMessage;
+
+            Application.Run((Form)mainForm);
         }
     }
 }

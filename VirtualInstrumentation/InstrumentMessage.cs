@@ -1,4 +1,6 @@
-﻿namespace VirtualInstrumentation
+﻿using System;
+
+namespace VirtualInstrumentation
 {
     public class InstrumentMessage
     {
@@ -15,7 +17,7 @@
 
         public override string ToString()
         {
-            return $"{Type}\n{Code}\n{Message}";
+            return $"{Type}{Environment.NewLine}{Code}{Environment.NewLine}{Message}";
         }
 
         public override int GetHashCode()

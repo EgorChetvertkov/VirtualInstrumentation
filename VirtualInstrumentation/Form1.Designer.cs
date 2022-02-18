@@ -432,10 +432,10 @@
             this.Weight5NUD.TabIndex = 21;
             this.Weight5NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Weight5NUD.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            -2147483648});
+            0});
             this.Weight5NUD.ValueChanged += new System.EventHandler(this.Weight5NUD_ValueChanged);
             // 
             // Weight5Label
@@ -474,10 +474,10 @@
             this.Weight4NUD.TabIndex = 19;
             this.Weight4NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Weight4NUD.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            -2147483648});
+            0});
             this.Weight4NUD.ValueChanged += new System.EventHandler(this.Weight4NUD_ValueChanged);
             // 
             // Weight4Label
@@ -516,10 +516,10 @@
             this.Weight3NUD.TabIndex = 17;
             this.Weight3NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Weight3NUD.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            -2147483648});
+            0});
             this.Weight3NUD.ValueChanged += new System.EventHandler(this.Weight3NUD_ValueChanged);
             // 
             // Weight3Label
@@ -558,10 +558,10 @@
             this.Weight2NUD.TabIndex = 15;
             this.Weight2NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Weight2NUD.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            -2147483648});
+            0});
             this.Weight2NUD.ValueChanged += new System.EventHandler(this.Weight2NUD_ValueChanged);
             // 
             // Weight2Label
@@ -600,10 +600,10 @@
             this.Weight1NUD.TabIndex = 13;
             this.Weight1NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Weight1NUD.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            -2147483648});
+            0});
             this.Weight1NUD.ValueChanged += new System.EventHandler(this.Weight1NUD_ValueChanged);
             // 
             // Weight1Label
@@ -642,10 +642,10 @@
             this.Weight0NUD.TabIndex = 11;
             this.Weight0NUD.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.Weight0NUD.Value = new decimal(new int[] {
-            5,
+            1,
             0,
             0,
-            -2147483648});
+            0});
             this.Weight0NUD.ValueChanged += new System.EventHandler(this.Weight0NUD_ValueChanged);
             // 
             // Weight0Label
@@ -731,6 +731,7 @@
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Виртуальный прибор для расчета значения функции";
+            this.Load += new System.EventHandler(this.MainForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.Chart)).EndInit();
             this.BaseXGB.ResumeLayout(false);
             this.BaseXGB.PerformLayout();

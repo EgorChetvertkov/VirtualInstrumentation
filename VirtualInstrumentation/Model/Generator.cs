@@ -5,27 +5,39 @@ namespace VirtualInstrumentation.Model
     internal class Generator
     {
         private Random _random;
-        private double _previousValue;
+        private double _max;
+        private double _min;
 
-        public Generator(double start)
+        public double CurrentValue { get; private set; }
+
+        public Generator(int seed, double max, double min)
         {
-            _random = new Random();
-            _previousValue = start;
+            _random = new Random(seed);
+            CurrentValue = NextValue();
+            _max = max;
+            _min = min;
+        }
+
+        private double NextValue()
+        {
+            return (_random.NextDouble() * 10) - 5;
         }
 
         private double NextReadValue()
         {
-            double value = (_random.NextDouble() * 10) - 5;
+            double value = NextValue();
 
-            if (Math.Abs(_previousValue - value) <= 0.5)
+            if (Math.Abs(CurrentValue - value) <= 0.5)
             {
-                _previousValue = value;
-                return _previousValue;
+                CurrentValue = value;
+            }
+            else
+            {
+                double direction = _random.NextDouble() / 2;
+                CurrentValue = value < CurrentValue ? CurrentValue - direction : CurrentValue + direction;
             }
 
-            _previousValue = value < _previousValue ? _previousValue - (_previousValue / 2) : _previousValue + (_previousValue / 2);
-
-            return _previousValue;
+            return CurrentValue;
         }
 
         private double NextErrorRate()
@@ -35,7 +47,20 @@ namespace VirtualInstrumentation.Model
 
         public double Next()
         {
-            return NextReadValue() + NextErrorRate();
+            double result = NextReadValue() + NextErrorRate();
+
+            if (result > _max)
+            {
+                CurrentValue = _max - _random.NextDouble() / 2;
+                return CurrentValue;
+            }
+            if (result < _min)
+            {
+                CurrentValue = _min + _random.NextDouble() / 2;
+                return CurrentValue;
+            }
+            
+            return result;
         }
     }
 }
