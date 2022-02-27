@@ -7,6 +7,8 @@ namespace VirtualInstrumentation.Interfaces
         event Action<double, double, double, double, double, double> Start;
         event Action Stop;
         event Action Exit;
+        event Action Write;
+        event Action NWrite;
 
         event Action<int, double> WXChange;
 

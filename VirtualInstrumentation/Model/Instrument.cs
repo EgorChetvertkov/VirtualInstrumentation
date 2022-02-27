@@ -120,5 +120,15 @@ namespace VirtualInstrumentation.Model
             _timer?.Dispose();
             Message?.Invoke(new InstrumentMessage(TypeMessage.Информация, $"Счет прекращен."));
         }
+
+        public void StartWriteDB()
+        {
+
+        }
+
+        public void StopWriteDB()
+        {
+
+        }
     }
 }
