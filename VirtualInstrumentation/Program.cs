@@ -23,8 +23,6 @@ namespace VirtualInstrumentation
             mainForm.Stop += instrument.Stop;
             mainForm.Exit += instrument.Stop;
             mainForm.WXChange += instrument.UpdateW;
-            mainForm.Write += instrument.StartWriteDB;
-            mainForm.NWrite += instrument.StopWriteDB;
 
             instrument.BaseXs += mainForm.UpdateBaseXs;
             instrument.FilterXs += mainForm.UpdateFilterXs;
