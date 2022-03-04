@@ -29,7 +29,9 @@
         private void InitializeComponent()
         {
             System.Windows.Forms.DataVisualization.Charting.ChartArea chartArea1 = new System.Windows.Forms.DataVisualization.Charting.ChartArea();
+            System.Windows.Forms.DataVisualization.Charting.Legend legend1 = new System.Windows.Forms.DataVisualization.Charting.Legend();
             System.Windows.Forms.DataVisualization.Charting.Series series1 = new System.Windows.Forms.DataVisualization.Charting.Series();
+            System.Windows.Forms.DataVisualization.Charting.Series series2 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.Chart = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.XBase0Label = new System.Windows.Forms.Label();
             this.XBase0TB = new System.Windows.Forms.TextBox();
@@ -113,17 +115,33 @@
             chartArea1.BackColor = System.Drawing.Color.Black;
             chartArea1.Name = "ChartArea";
             this.Chart.ChartAreas.Add(chartArea1);
+            legend1.Alignment = System.Drawing.StringAlignment.Center;
+            legend1.BackColor = System.Drawing.Color.Black;
+            legend1.Docking = System.Windows.Forms.DataVisualization.Charting.Docking.Top;
+            legend1.ForeColor = System.Drawing.Color.Lime;
+            legend1.Name = "Legend1";
+            this.Chart.Legends.Add(legend1);
             this.Chart.Location = new System.Drawing.Point(409, 13);
             this.Chart.Margin = new System.Windows.Forms.Padding(4);
             this.Chart.Name = "Chart";
             series1.BorderWidth = 2;
             series1.ChartArea = "ChartArea";
             series1.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
-            series1.Color = System.Drawing.Color.Lime;
+            series1.Color = System.Drawing.Color.Blue;
             series1.LabelForeColor = System.Drawing.Color.Lime;
-            series1.Name = "Series1";
+            series1.Legend = "Legend1";
+            series1.Name = "Сглаженные значения";
             series1.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
+            series2.BorderWidth = 2;
+            series2.ChartArea = "ChartArea";
+            series2.ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Spline;
+            series2.Color = System.Drawing.Color.Red;
+            series2.LabelForeColor = System.Drawing.Color.Lime;
+            series2.Legend = "Legend1";
+            series2.Name = "Чистые значения";
+            series2.XValueType = System.Windows.Forms.DataVisualization.Charting.ChartValueType.DateTime;
             this.Chart.Series.Add(series1);
+            this.Chart.Series.Add(series2);
             this.Chart.Size = new System.Drawing.Size(762, 535);
             this.Chart.TabIndex = 0;
             this.Chart.Text = "График функции";

@@ -21,7 +21,7 @@ namespace VirtualInstrumentation.Model
 
         private Function _function;
 
-        public event Action<DateTime, double> NextPoint;
+        public event Action<DateTime, double, double> NextPoint;
         public event Action<double, double, double> BaseXs;
         public event Action<double, double, double> FilterXs;
         public event Action<double> BaseY;
@@ -61,11 +61,11 @@ namespace VirtualInstrumentation.Model
             BaseY?.Invoke(y);
             Message?.Invoke(new InstrumentMessage(TypeMessage.Информация, $"Расчитано значение."));
 
-            y = _yFilter.ExpRunningAverage(y);
-            FilterY?.Invoke(y);
+            double filtredY = _yFilter.ExpRunningAverage(y);
+            FilterY?.Invoke(filtredY);
             Message?.Invoke(new InstrumentMessage(TypeMessage.Информация, $"Значение сглажено."));
 
-            NextPoint?.Invoke(DateTime.Now, y);
+            NextPoint?.Invoke(DateTime.Now, filtredY, y);
             Message?.Invoke(new InstrumentMessage(TypeMessage.Информация, $"Выведена точка."));
         }
 

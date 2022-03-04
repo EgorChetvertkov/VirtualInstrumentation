@@ -90,11 +90,11 @@ namespace VirtualInstrumentation
             WXChange?.Invoke(5, Convert.ToDouble(Weight5NUD.Value));
         }
 
-        public void UpdateChart(DateTime newX, double newY)
+        public void UpdateChart(DateTime newX, double newFiltredY, double newY)
         {
             if (InvokeRequired)
             {
-                _ = Invoke(new Action(() => UpdateChart(newX, newY)));
+                _ = Invoke(new Action(() => UpdateChart(newX, newFiltredY, newY)));
             }
             else
             {
@@ -107,7 +107,8 @@ namespace VirtualInstrumentation
                     _centerX = (Chart.ChartAreas[0].AxisX.Minimum + Chart.ChartAreas[0].AxisX.Maximum) / 2;
                 }
 
-                Chart.Series[0].Points.AddXY(x, newY);
+                Chart.Series[0].Points.AddXY(x, newFiltredY);
+                Chart.Series[1].Points.AddXY(x, newY);
             }
         }
 

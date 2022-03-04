@@ -10,7 +10,7 @@ namespace VirtualInstrumentation.Interfaces
 
         event Action<int, double> WXChange;
 
-        void UpdateChart(DateTime newX, double newY);
+        void UpdateChart(DateTime newX, double newFiltredY, double newY);
         void UpdateBaseXs(double x0, double x1, double x2);
         void UpdateFilterXs(double x0, double x1, double x2);
         void UpdateBaseY(double y);

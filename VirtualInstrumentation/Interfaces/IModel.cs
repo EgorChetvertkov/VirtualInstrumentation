@@ -4,7 +4,7 @@ namespace VirtualInstrumentation.Interfaces
 {
     internal interface IModel
     {
-        event Action<DateTime, double> NextPoint;
+        event Action<DateTime, double, double> NextPoint;
         event Action<double, double, double> BaseXs;
         event Action<double, double, double> FilterXs;
         event Action<double> BaseY;
