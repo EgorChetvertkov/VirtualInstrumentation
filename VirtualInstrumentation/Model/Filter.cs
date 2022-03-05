@@ -1,6 +1,6 @@
 ﻿namespace VirtualInstrumentation.Model
 {
-    internal class Filter
+    public class Filter
     {
         private double _filterCoefficient;
         private double _filterValue;

@@ -2,7 +2,7 @@
 
 namespace VirtualInstrumentation.Model
 {
-    internal class Function
+    public class Function
     {
         private double _w0;
         private double _w1;
@@ -31,7 +31,8 @@ namespace VirtualInstrumentation.Model
 
         public double Calculate(double x0, double x1, double x2)
         {
-            return (_w0 * x0) + (_w3 * Math.Sin(_w1 * x1)) + (_w4 * Math.Cos(_w2 * x2)) + _w5;
+            return (_w0 * x0) + 
+                (_w3 * Math.Sin(_w1 * x1)) + (_w4 * Math.Cos(_w2 * x2)) + _w5;
         }
 
         private double ValidWeight(double w)

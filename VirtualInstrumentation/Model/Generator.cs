@@ -2,7 +2,7 @@
 
 namespace VirtualInstrumentation.Model
 {
-    internal class Generator
+    public class Generator
     {
         private Random _random;
         private double _max;
@@ -34,7 +34,8 @@ namespace VirtualInstrumentation.Model
             else
             {
                 double direction = _random.NextDouble() / 2;
-                CurrentValue = value < CurrentValue ? CurrentValue - direction : CurrentValue + direction;
+                CurrentValue = value < CurrentValue ?
+                    CurrentValue - direction : CurrentValue + direction;
             }
 
             return CurrentValue;
@@ -42,7 +43,7 @@ namespace VirtualInstrumentation.Model
 
         private double NextErrorRate()
         {
-            return _random.NextDouble() / 1000;
+            return _random.NextDouble() * 0.000001;
         }
 
         public double Next()
